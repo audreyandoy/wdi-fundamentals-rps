@@ -2,9 +2,14 @@
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
 
+var computer = getComputerMove();
+var player = getPlayerMove();
+var winner=getWinner(playerMove, computerMove);
+
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
     return prompt();
+
 function randomPlay() {
     var randomNumber = Math.random();
     if (randomNumber < 0.33) {
@@ -21,12 +26,9 @@ function randomPlay() {
 
 function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
-    var move;
     // If a `move` has a value, your expression should evaluate to that value.
-    }
+
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    else if (move == null) {
-    }
     return move || getInput();
 }
 
@@ -117,4 +119,9 @@ var playToFive = function () {
     }
     return [playerWins, computerWins];
 }
+}
+
+
+
+
 
